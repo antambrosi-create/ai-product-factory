@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ai-product-factory
+    env: docker
+    autoDeploy: true
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: STORAGE_MODE
+        value: local
+      - key: BASE_URL
+        value: https://PLACEHOLDER-WILL-CHANGE
+      - key: BUDGET_TOKENS_OPENAI
+        value: "0"
+      - key: BUDGET_TOKENS_ANTHROPIC
+        value: "0"
